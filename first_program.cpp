@@ -1,4 +1,4 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
 int main(){
@@ -31,16 +31,42 @@ int main(){
 	cout << a << a++ << a << ++a << a << endl;
 	// relational operators: == != > < >= <= 
 	
-	///////        dynamic/runtime inputs ///////
+	///////        dynamic/runtime inputs      ///////
 	// need either a space or newline character to distinguish inputs 	
 	// careful with char inputs as they will take only 1 char and rest will be considered as the next input value.
 	// if any additional inputs values are passed they will be ignored.	
-	int p;
-	char q; 
-	cin >> q >> p;
-	cout << "the input integer given is:" << p << ". the input char is:" << q << endl;
+	// int p;
+ 	// char q; 
+	// cin >> q >> p;
+	// cout << "the input integer given is:" << p << ". the input char is:" << q << endl;
 
-	//////                               ////////
+	//////          Data type precidence        ////////
+	// calculations happens on higher data types char < int < long int < long long int < float < double 
 	cout << "7/2 = " << 7/2 << endl;
+	cout << "7/2.0 = " << 7/2.0 << endl;
+	cout << "'c'+1 = " << 'c'+1 << endl;
+	double u = 7/2;
+	cout << "double u = 7/2 even then u is " << u << endl;	
+
+	/////           Operator precidence      ////////
+	// left to right () [] -> . ++ --
+	// left to right * / %
+	// left to right + -	
+	cout << 7/2*3 << " " << 3*7/2 << endl;
 	
+	/////   approx. Range     ///////
+	// -10^9 < int < 10^9
+	// -10^12 < long int < 10^12
+	// -10^18 < long long int < 10^18
+	int a_outofrange = 1000000 * 12000000;
+	cout << "printing out of range 1000000 * 12000000 in int -- " << a_outofrange << endl;	
+	// INT_MIN ----- INT_MAX if a overflow happends then the cycle will repeat 
+	cout << INT_MAX << "  " << INT_MAX +1 << "  " << INT_MAX+2 << endl;
+	// 1LL is a represenation of 1 in long long int 
+	cout << 1LL * 1000000 * 120000  << endl;
+	// use fixed keyword to not to print in scientific notation
+	// setprecision(x) to define the number of decimal points you want to print
+	// double doesn't store accurate large numbers it will store only the approx values
+	double e = 1e24;
+	cout << fixed << e << endl;
 }
