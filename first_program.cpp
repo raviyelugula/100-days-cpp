@@ -38,5 +38,9 @@ int main(){
 	int p;
 	char q; 
 	cin >> q >> p;
-	cout << "the input integer given is:" << p << ". the input char is:" << q << endl;	
+	cout << "the input integer given is:" << p << ". the input char is:" << q << endl;
+
+	//////                               ////////
+	cout << "7/2 = " << 7/2 << endl;
+	
 }
