@@ -69,4 +69,36 @@ int main(){
 	// double doesn't store accurate large numbers it will store only the approx values
 	double e = 1e24;
 	cout << fixed << e << endl;
-}
+	
+	////// Conditional Operations ///////
+	// < > == <= >= 
+	// &&  and, || or 
+	int a1 = 2;
+	int a2 = 3;
+	cout << ((a1<a2) || (a1==2))<< endl;
+	
+	if(a1==2){
+		cout << "a1 is 2"<< endl;
+	}
+	else{
+		cout << "a1 isnot 2"<< endl;
+	}
+	
+	///// Scope is defined as the code inside {}. The variables defined inside can't be used outside ///////
+	///// Global variables are the ones that are defined outside {} i.e. out you clauses/function/main. They can be used anywhere in the code //////	
+
+	///// Loops   //////
+	///// break and continue -- jump statements /////
+	int t;
+	cin >>t;
+	while(t--){
+		cout << "inside while loop" << t << endl;
+		}
+	for(int a3=1; a3 <=10; a3++){
+		cout << "inside for loop "<< a3 << endl;
+	}			
+
+
+}	
+
+
