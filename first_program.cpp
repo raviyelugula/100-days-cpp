@@ -90,15 +90,49 @@ int main(){
 	///// Loops   //////
 	///// break and continue -- jump statements /////
 	int t;
-	cin >>t;
+	t = 2; //cin >>t;
 	while(t--){
 		cout << "inside while loop" << t << endl;
 		}
 	for(int a3=1; a3 <=10; a3++){
 		cout << "inside for loop "<< a3 << endl;
 	}			
+	
+	//////  Strings    ////////
+	string str1 = "hello";
+	cout << str1 << endl;
+	for(int i = 0; i < str1.size(); i++){
+		cout << str1[i] << " - " << i << endl;	
+	}
 
+	//// Read entire line as an input even if there are any spaces ////
+	cout << "enter a sentence:" << endl;
+	string str_l1;
+	getline(cin, str_l1);
+	cout << str_l1 << endl;
 
+	//// Enter number of lines as input and then pass those many lines of input /////
+	cout << "enter number of lines" << endl;
+	int num_lines;
+	cin >> num_lines;
+	cin.ignore(); // below we are using getline, if the current int input's last line is not picked up then getline considers it as a 1st line
+	while(num_lines--){
+		string str_l2;
+		getline(cin, str_l2);
+		cout << str_l2 << endl;
+	}
+
+	///// string reverse /////
+	cout << "enter the string that needs to be reversed:" << endl;
+	string ip_str1;
+	cin >> ip_str1;
+	int ip_str1_len = ip_str1.size();
+	string str1_resver;
+	while(ip_str1_len--){
+		cout << ip_str1[ip_str1_len];
+		str1_resver.push_back(ip_str1[ip_str1_len]);
+	}
+	cout << endl << str1_resver;
 }	
 
 
