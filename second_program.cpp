@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-
+// test git local status
 int main(){
 	/////   Arrays    /////
 	cout << "enter the number of values to be read" << endl;
