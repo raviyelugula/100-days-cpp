@@ -1,6 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+void swap_number(int &p, int &q){
+	int temp;
+	temp = q;
+	q = p;
+	p = temp;
+}	
+
 int main(){
 	/////   Arrays    /////
 	cout << "enter the number of values to be read" << endl;
@@ -37,7 +45,15 @@ int main(){
 	// local arrays size is 10^5 order 
 	// global arrays size is 10^7 order 
 
-		
+	////   Functions and pass by value and reference /////
+	cout << "enter two numbers:" << endl;
+	int b1, b2;
+	cin >> b1 >> b2;
+	
+	cout << "Given numbers are: " << b1 << " " << b2 << endl;
+	swap_number(b1,b2);
+	cout << "Given numbers are: " << b1 << " " << b2 << endl;	
+	
 	
 }
 
